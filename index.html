@@ -7,35 +7,65 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            background-color: #f5f7fa;
             color: #333;
             margin: 0;
             padding: 0;
+            background-image: url(blob:https://imgur.com/c52db6df-c8b1-465a-b6a7-76bba3a119d2); /* Playful wave pattern */
+            background-size: cover;
         }
         header {
             background-color: #ffdd57;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
             color: #333;
         }
-        nav {
-            text-align: center;
-            margin: 20px;
+        /* Dropdown Menu Styling */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            right: 30px;
         }
-        nav a {
-            margin: 0 15px;
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
             text-decoration: none;
-            color: #0073e6;
-            font-size: 1.2em;
+            display: block;
         }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #0073e6;
+        }
+        /* Hero Section */
         .hero {
             text-align: center;
             padding: 50px;
-            background-color: #bde0fe;
+            background-color: rgba(189, 224, 254, 0.7); /* Transparent playful background */
         }
         .hero h2 {
             font-size: 2em;
@@ -46,12 +76,14 @@
             height: auto;
             border-radius: 15px;
         }
+        /* Content Sections */
         .content {
             padding: 20px;
         }
         .fun-fact {
             text-align: center;
         }
+        /* Footer */
         footer {
             background-color: #ffdd57;
             text-align: center;
@@ -67,11 +99,15 @@
 
 <header>
     <h1>Bob.Funny.com</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#fun-facts">Fun Facts</a>
-        <a href="#gallery">Photo Gallery</a>
-    </nav>
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="#gallery">Photo Gallery</a>
+            <a href="#about">About This Page</a>
+            <a href="#fun-facts">Fun Baseball Moments</a>
+        </div>
+    </div>
 </header>
 
 <section class="hero">
@@ -98,8 +134,15 @@
 <section id="gallery" class="content">
     <h2>Photo Gallery</h2>
     <p>Check out some of the funny moments captured during games!</p>
-    <img src="gallery_photo1.jpg" alt="Kids laughing and playing baseball" style="width:100%; max-width:500px;">
-    <img src="gallery_photo2.jpg" alt="Kid running to the wrong base" style="width:100%; max-width:500px;">
+    <img src="https://i.imgur.com/Mc1dAgD.png" alt="Kids laughing and playing baseball" style="width:100%; max-width:500px;">
+    <img src="https://i.imgur.com/Jq7ZnOB.png" alt="Kid running to the Wrong Place To Hit" style="width:100%; max-width:500px;">
+</section>
+
+<!-- Contact Information -->
+<section class="content">
+    <h2>Contact Us</h2>
+    <p>If you have funny stories or feedback, feel free to reach us at:</p>
+    <p>Email: <a href="mailto:Mada.Utgest@gmail.com">Mada.Utgest@gmail.com</a></p>
 </section>
 
 <footer>
